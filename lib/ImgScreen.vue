@@ -135,7 +135,9 @@
       },
       transform (state) {
         const { translate: ts, scale } = state
-        this.$refs.image.style.transform = `translate(-50%, -50%) translate(${ts[0]}px, ${ts[1]}px) scale(${scale})`
+        if (this.$refs.image) {
+          this.$refs.image.style.transform = `translate(-50%, -50%) translate(${ts[0]}px, ${ts[1]}px) scale(${scale})`
+        }
       },
       close() {
         document.querySelector('body').classList.remove('body-fs-v-img');
