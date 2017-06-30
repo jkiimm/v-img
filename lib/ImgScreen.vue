@@ -42,7 +42,7 @@
 
         <div class="content-v-img">
           <transition appear name="v-img-fade">
-            <img :src="images[currentImageIndex]" @click="next" ref="image">
+            <img :src="images[currentImageIndex]" @click="initState" ref="image">
           </transition>
         </div>
       </div>
